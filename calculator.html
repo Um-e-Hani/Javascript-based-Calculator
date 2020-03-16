@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<style>
+button[type="button"]{width:100%; height:100%}
+input[type="text"]{width:100%; height:100%/}
+</style>
+</head>
+<body>
+
+<table border=1px style=" border-color:black; text-align:center;">
+<tr style="height:60px">
+	<td colspan=5 >
+	<p id="val"></p>
+	</td>
+</tr>
+<tr>
+	<td ><button type="button" onclick="mcfunc()">MC</button></td>
+	<td ><button width=100% type="button" onclick="zerofunc()"> 0</button></td>
+	<td ><button width=100% type="button" onclick="onefunc()"> 1</button></td>
+	<td ><button width=100% type="button" onclick="twofunc()"> 2</button></td>
+	<td ><button width=100% type="button" onclick="plusfunc()"> +</button></td>
+</tr>
+<tr>
+	<td ><button type="button" onclick="msfunc()">MS</button></td>
+	<td ><button type="button" onclick="threefunc()">3</button></td>
+	<td ><button type="button" onclick="fourfunc()">4</button></td>
+	<td ><button type="button" onclick="fivefunc()">5</button></td>
+	<td ><button type="button" onclick="minusfunc()">-</button></td>
+</tr>
+<tr>
+	<td ><button type="button" onclick="mrfunc()">MR</button></td>
+	<td ><button type="button" onclick="sixfunc()">6</button></td>
+	<td ><button type="button" onclick="sevenfunc()">7</button></td>
+	<td ><button type="button" onclick="eightfunc()">8</button></td>
+	<td ><button type="button" onclick="mulfunc()">X</button></td>
+</tr>
+<tr>
+	<td ><button type="button" onclick="mplusfunc()">M+</button></td>
+	<td ><button type="button" onclick="ninefunc()">9</button></td>
+	<td ><button type="button" onclick="signfunc()">+-</button></td>
+	<td ><button type="button" onclick="equalfunc()">=</button></td>
+	<td ><button type="button" onclick="dividefunc()">/</button></td>
+</tr>
+<tr>
+	<td width=20%><button type="button" onclick="onexfunc()">1/X</button></td>
+	<td width=20%><button type="button" onclick="dotfunc()">.</button></td>
+	<td width=20%><button type="button" onclick="sqrfunc()">x2</button></td>
+	<td width=20%><button type="button" onclick="sqrtfunc()">√</button></td>
+	<td width=20%><button type="button" onclick="clearfunc()">C</button></td>
+</tr>
+</table>
+
+<script >
+var msnum;
+function zerofunc(){
+var x = document.getElementById("val").innerHTML;
+x = x + "0";
+document.getElementById("val").innerHTML = x;
+}
+function onefunc(){
+var x = document.getElementById("val").innerHTML;
+x = x + "1";
+document.getElementById("val").innerHTML = x;
+}
+function twofunc(){
+var x = document.getElementById("val").innerHTML;
+x = x + "2";
+document.getElementById("val").innerHTML = x;
+}
+function threefunc(){
+var x = document.getElementById("val").innerHTML;
+x = x + "3";
+document.getElementById("val").innerHTML = x;
+}
+function fourfunc(){
+var x = document.getElementById("val").innerHTML;
+x = x + "4";
+document.getElementById("val").innerHTML = x;
+}
+function fivefunc(){
+var x = document.getElementById("val").innerHTML;
+x = x + "5";
+document.getElementById("val").innerHTML = x;
+}
+function sixfunc(){
+var x = document.getElementById("val").innerHTML;
+x = x + "6";
+document.getElementById("val").innerHTML = x;
+}
+function sevenfunc(){
+var x = document.getElementById("val").innerHTML;
+x = x + "7";
+document.getElementById("val").innerHTML = x;
+}
+function eightfunc(){
+var x = document.getElementById("val").innerHTML;
+x = x + "8";
+document.getElementById("val").innerHTML = x;
+}
+function ninefunc(){
+var x = document.getElementById("val").innerHTML;
+x = x + "9";
+document.getElementById("val").innerHTML = x;
+}
+function clearfunc(){
+var x = document.getElementById("val").innerHTML;
+x = "";
+document.getElementById("val").innerHTML = x;
+}
+function zerofunc(){
+var x = document.getElementById("val").innerHTML;
+x = x + "0";
+document.getElementById("val").innerHTML = x;
+}
+function plusfunc(){
+var x = document.getElementById("val").innerHTML;
+x = x + "+";
+document.getElementById("val").innerHTML = x;
+}
+function minusfunc(){
+var x = document.getElementById("val").innerHTML;
+x = x + "-";
+document.getElementById("val").innerHTML = x;
+}
+function mulfunc(){
+var x = document.getElementById("val").innerHTML;
+x = x + "*";
+document.getElementById("val").innerHTML = x;
+}
+function dividefunc(){
+var x = document.getElementById("val").innerHTML;
+x = x + "/";
+document.getElementById("val").innerHTML = x;
+}
+function dotfunc(){
+var x = document.getElementById("val").innerHTML;
+x = x + ".0";
+document.getElementById("val").innerHTML = x;
+}
+function equalfunc(){
+var x = document.getElementById("val").innerHTML;
+var y = eval(x);
+document.getElementById("val").innerHTML = y;
+}
+function sqrfunc(){
+var x = document.getElementById("val").innerHTML;
+x = eval(x);
+var y = parseInt(x);
+y = y*y;
+document.getElementById("val").innerHTML = y;
+}
+function sqrtfunc(){
+var x = document.getElementById("val").innerHTML;
+x = eval(x);
+var y = parseInt(x);
+y = Math. sqrt(y);
+document.getElementById("val").innerHTML = y;
+}
+function onexfunc(){
+var x = document.getElementById("val").innerHTML;
+x = eval(x);
+var y = parseInt(x);
+y = 1/y;
+document.getElementById("val").innerHTML = y;
+}
+function msfunc(){
+var x = document.getElementById("val").innerHTML;
+if(!isNaN(x)){
+	msnum = Number(x);
+}
+}
+function mrfunc(){
+document.getElementById("val").innerHTML = msnum;
+}
+function mcfunc(){
+msnum = 0;
+}
+function mplusfunc(){
+var x = document.getElementById("val").innerHTML;
+if(!isNaN(x)){
+	msnum = msnum + Number(x);
+}
+}
+function signfunc(){
+	var x = document.getElementById("val").innerHTML;
+	x = eval(x);
+	var y = parseInt(x);
+	y = y*-1
+	document.getElementById("val").innerHTML = y;
+}
+
+</script>
+</body>
+</html>
